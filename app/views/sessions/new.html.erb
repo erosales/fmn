@@ -1,0 +1,18 @@
+<article>
+<header>
+<h1>Login</h1>
+</header>
+<%= form_tag sessions_path do %>
+  <p>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </p>
+    <p>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password, params[:email] %>
+  </p>
+  
+  <p class = "button"><%= submit_tag %></p>
+<% end %>
+
+</article>

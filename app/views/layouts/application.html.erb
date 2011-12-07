@@ -2,13 +2,31 @@
 <html>
 <head>
   <title>Fmn</title>
+  <%= render 'layouts/stylesheets'%>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-
-<%= yield %>
-
+  <header>
+    <h1><%= image_tag("forgetlogo.png",) %></h1>
+    <hr/>
+    <h2>
+      <a href="#"><%= link_to "Login"  , log_in_path %></a>|
+      <a href="#"><%= link_to "Sign up", sign_up_path %></a>|
+      
+    </h2>
+  </header>
+  
+  <% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
+     
+  <%= yield %>
+  
+  <footer>  
+  </footer>
+  
 </body>
 </html>
