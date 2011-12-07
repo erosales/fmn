@@ -12,11 +12,20 @@
   <header>
     <h1><%= image_tag("forgetlogo.png",) %></h1>
     <hr/>
-    <h2>
-      <a href="#"><%= link_to "Login"  , log_in_path %></a>|
-      <a href="#"><%= link_to "Sign up", sign_up_path %></a>|
+    
+    <div id= "user_nav">
       
-    </h2>
+      <% if current_user %>
+           Logged in as <%= current_user.email %>
+           <%= link_to "Log Out", log_out_path %>
+      <% else %>
+          <%= link_to "Sign up", sign_up_path %>
+          <%= link_to "Login", log_in_path %>
+      <% end %>
+      
+    </div>
+    
+
   </header>
   
   <% flash.each do |name, msg| %>
