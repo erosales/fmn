@@ -17,6 +17,7 @@ header {
  
 header h2 {
         margin: 0px;
+        text-align: left;
 }
  
 h1 {
@@ -46,7 +47,9 @@ h4 {
         top: 50px;
         left: -120px;
         text-align:center;
- 
+}
+div{
+	    text-align: left;
 }
  
 nav {
