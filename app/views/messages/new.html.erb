@@ -1,10 +1,21 @@
 <section>
 <article>
 <header>
-<h1>Sign Up:</h1>
+<h1>Create a Reminder:</h1>
 </header>
 	
 <%= form_for @message do |f| %> 
+  <% if @message.errors.any? %>
+  <h3>ERROR SUBMITTING MESSAGE!</h3>
+  <p_left class = "error_messages">
+  	<ul>
+	  <% for message in @message.errors.full_messages %>
+	     <li> <%= message %></li>
+      <% end %>
+    </ul>
+  </p_left>
+  <% end %>
+  
   <p>
     <%= f.label :date %><br />
     <%= f.date_select :date %>
@@ -13,9 +24,9 @@
     <%= f.label :time %><br />
     <%= f.time_select :time %>
   </p>
-  <p>
+  <p>  	
     <%= f.label :message %><br />
-    <%= f.text_area :message %>
+    <%= f.text_area :message %>    
   </p>
   <p>
     <%= f.label :phone %><br />

@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email 
   validates_format_of :email, :with => email_regexp 
   validates_length_of :email, :maximum=>60, 
-								  :message=>"Email less than 60 chars please."
+								  :alert=>"Email less than 60 chars please."
 								  
   validates_confirmation_of :password
   validates_length_of :password, :within => 6..60, :too_long => "Password must be shorter than 60 chars",
