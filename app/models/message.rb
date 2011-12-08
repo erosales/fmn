@@ -1,4 +1,7 @@
 class Message < ActiveRecord::Base
+  
+  belongs_to :users, :foreign_key => 'user_id'
+  
   attr_accessible :date, :time, :message, :phone
     
   validates_presence_of :message 

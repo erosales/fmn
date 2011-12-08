@@ -5,9 +5,8 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', :group => :development
 gem "bcrypt-ruby", :require => "bcrypt"
-
 gem "nifty-generators", :group => :development
 #gem 'activerecord-postgresql-adapter' 
 
@@ -21,7 +20,7 @@ group :assets do
 end
 
 group :production do
-  gem 'pg', '~> 0.11.0'
+  gem 'pg'
   #gem 'therubyracer-heroku', '~>0.8.1.pre3'
   gem 'faker', '~> 1.0.1'
 end
