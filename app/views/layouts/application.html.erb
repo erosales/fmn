@@ -7,25 +7,36 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-
 <body>
   <header>
-    <h1><%= image_tag("forgetlogo.png",) %></h1>
+    <h1><%= image_tag("fmn1.jpg",) %></h1>
     <hr/>
     
-    <div id= "user_nav">      
-      <% if current_user %>
-           Logged in as <%= current_user.email %><br />
-      <h2>     
-           <%= link_to "Log out", log_out_path %>
-      <% else %>
-          <%= link_to "Sign up", sign_up_path %>
-          <%= link_to "Login", log_in_path %>
+  <div>      
+   <% if current_user %>
+   <h5>     
+       <%= link_to "Log out", log_out_path %>
+   <% else %>
+        <%= link_to "Sign up", sign_up_path %> or
+        <%= link_to "Login", log_in_path %>
       <% end %>
-      </h2>
-    </div>
+   </h5>
+  </div>
+  <% if current_user %>
+    <nav>
+      <strong>Schedule</strong>
+      <ul_b>
+      <li><%= link_to "Create a Reminder", new_message_path %></li>
+      <li><%= link_to "Manage Reminders", new_user_path %></li>
+      <li>Contact</li>
+      </ul_b>
+    </nav>
+  <% else %>
+    <nav>
+      Sign up Already!
+    <nav>
+  <% end %>
     
-
   </header>
   
   <% flash.each do |name, msg| %>
@@ -34,7 +45,16 @@
      
   <%= yield %>
   
+  <aside>
+  <h2>Need A Reminder?</h2>
+    <p>Have an important date? Can't be late? Enter your message
+       and we'll remind you when the time comes.</p>
+    <p><%= image_tag("forgetlogo2.jpg") %></p>
+  </aside>
   <footer>  
+    <% if current_user %>
+         Logged in as <%= current_user.email %>
+    <% end %>     
   </footer>
   
 </body>

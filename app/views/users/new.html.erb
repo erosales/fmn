@@ -1,19 +1,24 @@
 <section>
 <article>
+
 <header>
 <h1>Sign Up:</h1>
 </header>
+
+
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
-    <div class = "error_messages">
-	<h2>Form is invalid</h2>
+    <h3>ERROR SUBMITTING FORM!</h3>
+    <p_left class = "error_messages">
+	
 	<ul>
 	  <% for message in @user.errors.full_messages %>
 	     <li> <%= message %></li>
       <% end %>
     </ul>
-	</div>
+	</p_left>
   <% end %>
+  
   <p>
     <%= f.label :email  %><br />
 	<%= f.text_field :email %>

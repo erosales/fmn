@@ -1,11 +1,12 @@
 body {
-        background-color:#CCCCCC;
+        background-color:#666666;
         font-family:Geneva,Arial,Helvetica,sans-serif;
         margin: 0px auto;
-        max-width:800px;
+        max-width:900px;
         border:solid;
         border-color:#FFFFFF;
 }
+
  
 header {
         background-color: #F47D31;
@@ -14,32 +15,36 @@ header {
         color:#FFFFFF;
         text-align:center;
 }
- 
 header h2 {
         margin: 0px;
-        text-align: left;
+        text-align: right;
 }
- 
-h1 {
+header h3 {
+        margin: 0px;
+        text-align: right;
+}
+header div{
+		text-align: right;
+} 
+
+
+h1{
         font-size: 50px;
         margin: 0px;
 }
- 
-h2 {
+h2{
         font-size: 20px;
         margin: 0px;
         text-align:right;
         color: #FFFFFF;
-}
- 
-h3 {
-        font-size: 18px;
+} 
+h3{
+        font-size: 15px;
         margin: 0px;
         text-align:center;
-        color: #F47D31;
+        color: #FF0000;
 }
- 
-h4 {
+h4{
         color: #F47D31;
         background-color: #fff;
         position: absolute;
@@ -48,11 +53,22 @@ h4 {
         left: -120px;
         text-align:center;
 }
+
+
+ul_b{
+        list-style: none;
+}
+p_left{
+        text-align: left;
+}
+
 div{
 	    text-align: left;
+	    list-style-type: none;
 }
+
  
-nav {
+nav{
         display:block;
         width:25%;
         float:left;
@@ -77,9 +93,7 @@ nav h3 {
         color: white;
 }
  
-#container {
-        background-color: #888;
-}
+
  
 section {
         display:block;
@@ -89,7 +103,7 @@ section {
 }
  
 article {
-        background-color: #eee;
+        background-color: #CCCCCC;
         display:block;
         margin: 10px;
         padding: 10px;
