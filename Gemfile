@@ -8,7 +8,7 @@ gem 'rails', '3.1.3'
 gem 'sqlite3'
 gem "bcrypt-ruby", :require => "bcrypt"
 
-
+gem "nifty-generators", :group => :development
 #gem 'activerecord-postgresql-adapter' 
 
 
