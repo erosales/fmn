@@ -1,4 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
+  has_one :email
+  has_many :messages
+  
   def change
     create_table :users do |t|
       t.string :email

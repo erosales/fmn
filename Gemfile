@@ -20,18 +20,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  gem 'pg', '~> 0.11.0'
+  #gem 'therubyracer-heroku', '~>0.8.1.pre3'
+  gem 'faker', '~> 1.0.1'
+end
+
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem "mocha", :group => :test

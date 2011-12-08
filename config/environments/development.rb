@@ -27,4 +27,6 @@ Fmn::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.assets.initialize_on_precompile = false
 end

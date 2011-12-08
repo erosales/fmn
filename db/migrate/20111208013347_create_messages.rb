@@ -1,4 +1,6 @@
 class CreateMessages < ActiveRecord::Migration
+  belongs_to :user
+  
   def self.up
     create_table :messages do |t|
       t.date :date
