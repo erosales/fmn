@@ -8,8 +8,9 @@ gem 'rails', '3.1.3'
 gem 'sqlite3', :group => :development
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "nifty-generators", :group => :development
-#gem 'activerecord-postgresql-adapter' 
-gem 'activerecord-jdbcpostgresql-adapter'
+
+#gem 'activerecord-postgresql-adapter', :group => :production 
+
 
 
 # Gems used only for assets and not required
