@@ -18,6 +18,6 @@ class MessagesController < ApplicationController
   
   def edit
     @user=User.find(params[:id])
-    @title= "Edituser"
+    @title= "Edit User"
   end
 end
